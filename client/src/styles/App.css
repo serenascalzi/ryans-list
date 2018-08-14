@@ -1,0 +1,103 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+	box-sizing:border-box;
+}
+
+*, *:before, *:after {
+	box-sizing:inherit;
+}
+
+div > h1 {
+	padding:10px;
+	font-family:serif;
+	font-size:24px;
+	font-weight:normal;
+	text-align:center;
+	background-color:lightgray;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+}
+
+a {
+	text-decoration:none;
+}
+
+p, img {
+	padding:5px;
+}
+
+form {
+	font-family:sans-serif;
+	font-size:14px;
+}
+
+form > input {
+	width:500px;
+	margin:10px 0;
+}
+
+form > button {
+	margin:10px 0;
+	padding:5px;
+}
+
+.main {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	width:1000px;
+	margin:20px auto;
+}
+
+.maincats {
+	padding:5px;
+	font-family:sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	background-color:lightgray;
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+
+}
+
+.maincats:hover {
+	background-color:white;
+}
+
+.mainsubs {
+	padding:5px 5px 0 5px;
+	font-family:sans-serif;
+	font-size:12px;
+	border-bottom:1px solid gray;
+}
+
+.mainsubs:hover {
+	background-color:lightgray;
+}
+
+.categories, .subcategories, .posts, .post  {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	width:1000px;
+	margin:20px auto;
+}
+
+.cats, .subs, .psts {
+	padding:5px;
+	font-family:sans-serif;
+	font-size:14px;
+	border-bottom:1px solid lightgray;
+}
+
+.addLink {
+	padding:10px 5px;
+	font-family:sans-serif;
+	font-size:14px;
+	text-transform:uppercase;
+}
