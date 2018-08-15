@@ -3,15 +3,15 @@ import {getCategories} from '../actions/listActions'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-class Categories extends Component {
+class CatGal extends Component {
 
-	componentDidMount() {
+    componentDidMount() {
         getCategories(this.props.match.params.id)
     }
 
-	render() {
-		return (
-			<div>
+    render() {
+        return (
+            <div>
                 <div className="links">
                     <div className="viewLinks">
                         <Link to={`/categories/${this.props.match.params.id}/catlist`}>List</Link> | <Link to={`/categories/${this.props.match.params.id}/catthumb`}>Thumbnail</Link> | <Link to={`/categories/${this.props.match.params.id}/catgal`}>Gallery</Link>
@@ -20,21 +20,21 @@ class Categories extends Component {
                         <Link to={`/categories/${this.props.match.params.id}/post`}>+ Add Post</Link>
                     </div>
                 </div>
-				<div className="categories">
+                <div className="galView">
                     {this.props.categories.map((category, i) => (
-                        <div className="cats" key={`cat-${i}`}>
+                        <div className="gal" key={`cat-${i}`}>
                             <div>
-                                <Link to={`/posts/${category.id}`}>{category.name}</Link> {category.description} <a href={category.image}>Image</a>
+                                <img src={category.image} alt="" /><br /><Link to={`/posts/${category.id}`}>{category.name}</Link><br />{category.description}
                             </div>
                         </div>
                     ))}
                 </div>
-			</div>
-		)
-	}
+            </div>
+        )
+    }
 }
 
-Categories.defaultProps = {
+CatGal.defaultProps = {
     categories:[]
 }
 
@@ -44,4 +44,4 @@ function mapStateToProps(appState) {
     }
 }
 
-export default connect(mapStateToProps)(Categories)
+export default connect(mapStateToProps)(CatGal)

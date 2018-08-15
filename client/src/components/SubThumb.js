@@ -3,7 +3,7 @@ import {getSubcategories} from '../actions/listActions'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-class Subcategories extends Component {
+class SubThumb extends Component {
 
 	componentDidMount() {
         getSubcategories(this.props.match.params.id)
@@ -20,11 +20,11 @@ class Subcategories extends Component {
                         <Link to={`/subcategories/${this.props.match.params.id}/post`}>+ Add Post</Link>
                     </div>
                 </div>
-				<div className="subcategories">
+				<div className="thumbView">
                     {this.props.subcategories.map((subcategory, i) => (
-                        <div className="subs" key={`sub-${i}`}>
+                        <div className="thumb" key={`sub-${i}`}>
                             <div>
-                                <Link to={`/posts/${subcategory.id}`}>{subcategory.name}</Link> {subcategory.description} <a href={subcategory.image}>Image</a>
+                                <img src={subcategory.image} alt="" /> <Link to={`/posts/${subcategory.id}`}>{subcategory.name}</Link> {subcategory.description}
                             </div>
                         </div>
                     ))}
@@ -34,7 +34,7 @@ class Subcategories extends Component {
 	}
 }
 
-Subcategories.defaultProps = {
+SubThumb.defaultProps = {
     subcategories:[]
 }
 
@@ -44,4 +44,4 @@ function mapStateToProps(appState) {
     }
 }
 
-export default connect(mapStateToProps)(Subcategories)
+export default connect(mapStateToProps)(SubThumb)

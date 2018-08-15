@@ -62,7 +62,6 @@ form > button {
 	background-color:lightgray;
 	border-top:1px solid gray;
 	border-bottom:1px solid gray;
-
 }
 
 .maincats:hover {
@@ -80,7 +79,7 @@ form > button {
 	background-color:lightgray;
 }
 
-.categories, .subcategories, .posts, .post  {
+.categories, .subcategories, .posts, .post, .listView, .thumbView {
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction:column;
@@ -88,16 +87,48 @@ form > button {
 	margin:20px auto;
 }
 
-.cats, .subs, .psts {
+.cats, .subs, .psts, .list, .thumb {
 	padding:5px;
 	font-family:sans-serif;
 	font-size:14px;
 	border-bottom:1px solid lightgray;
 }
 
-.addLink {
-	padding:10px 5px;
+.thumb img {
+	width:50px;
+	vertical-align:middle;
+}
+
+.galView {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-around;
+	width:1000px;
+	margin:20px auto;
+}
+
+.gal {
+	margin:10px;
+	padding:5px;
 	font-family:sans-serif;
 	font-size:14px;
+	text-align:center;
+	border:1px solid lightgray;
+}
+
+.links {
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-around;
+	width:300px;
+	margin:10px auto;
+}
+
+.viewLinks, .postLink {
+	font-family:sans-serif;
+	font-size:14px;
+	font-weight:bold;
 	text-transform:uppercase;
 }

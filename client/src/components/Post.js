@@ -23,12 +23,16 @@ class Post extends Component {
             image:this.state.image,
             category_id:this.props.match.params.id
         })
+        this.setState({
+            name:'',
+            description:'',
+            image:''
+        })
     }
 
 	render() {
 		return (
 			<div>
-                <h1>ryanslist | las vegas</h1>
                 <div className="post">
                     <form onSubmit={this.handleSubmit}>
                         <label htmlFor="name">Post Name</label><br />

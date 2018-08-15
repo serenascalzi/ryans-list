@@ -45,7 +45,7 @@ router.get('/categories/:id', (req, res, next) => {
 		let id = req.params.id
 
 		for (let i = 0; i < results.length; i++) {
-			if (results[i].parent_id == id) {
+			if (results[i].parent_id == id || results[i].category_id == id) {
 				cat.push(results[i])
 			}
 		}

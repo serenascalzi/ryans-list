@@ -11,7 +11,6 @@ class Posts extends Component {
 	render() {
 		return (
 			<div>
-                <h1>ryanslist | las vegas</h1>
 				<div className="posts">
                     {this.props.posts.map((post, i) => (
                         <div className="psts" key={`pst-${i}`}>
